@@ -1,0 +1,42 @@
+{
+  "states": [
+    "Punjab",
+    "Haryana",
+    "Uttar Pradesh",
+    "Rajasthan",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Gujarat",
+    "Karnataka",
+    "Andhra Pradesh",
+    "Telangana",
+    "Bihar",
+    "Chhattisgarh",
+    "Tamil Nadu",
+    "West Bengal",
+    "Odisha"
+  ],
+  "split_date": "2020-02-14",
+  "n_train": 5940,
+  "n_test": 1500,
+  "svr_params": {
+    "m__C": 300,
+    "m__epsilon": 0.1,
+    "m__gamma": 0.01
+  },
+  "dt_params": {
+    "m__max_depth": 8,
+    "m__min_samples_leaf": 20
+  },
+  "features": [
+    "lag1",
+    "lag2",
+    "lag7",
+    "roll7",
+    "dow",
+    "month",
+    "doy_sin",
+    "doy_cos",
+    "state"
+  ]
+}

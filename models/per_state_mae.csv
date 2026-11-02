@@ -1,0 +1,16 @@
+state,SVR,Decision Tree,Ensemble (Voting),Ensemble (Stacking)
+Andhra Pradesh,8.17,8.845,8.155,8.764
+Bihar,8.881,9.737,9.158,11.898
+Chhattisgarh,5.533,6.168,5.697,9.273
+Gujarat,16.631,20.225,18.01,21.333
+Haryana,22.122,23.582,22.388,23.243
+Karnataka,15.938,17.715,16.497,16.557
+Madhya Pradesh,15.342,18.337,16.402,16.098
+Maharashtra,21.172,26.3,23.112,31.361
+Odisha,6.756,7.152,6.777,10.082
+Punjab,30.365,33.782,31.181,32.847
+Rajasthan,13.533,18.641,15.57,14.811
+Tamil Nadu,16.888,19.886,17.711,19.555
+Telangana,16.498,17.698,16.859,17.306
+Uttar Pradesh,39.541,39.835,38.68,43.273
+West Bengal,15.768,16.289,15.619,17.212
