@@ -61,7 +61,7 @@ t.rows[0].cells[0].text, t.rows[0].cells[1].text = "Student name", "Roll number"
 for n, rl in [("Ankit Garg", "Btech/10218/23"), ("Ayush Mishra", "Btech/10219/23"), ("Anshuman Banerjee", "Btech/10211/23")]:
     c = t.add_row().cells; c[0].text, c[1].text = n, rl
 doc.add_paragraph()
-P("Course: Cloud Computing Lab (B.Tech)\nSemester: ______\nSubmission date: ______")
+P("Course: Cloud Computing Lab (B.Tech)\nSemester: 7th\nSubmission date: 3 November 2026")
 P(f"Code repository: {REPO_URL}\nDeployed application: {APP_URL}")
 doc.add_page_break()
 
