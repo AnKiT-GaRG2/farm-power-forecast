@@ -28,6 +28,9 @@ streamlit run app.py         # dashboard
 python src/build_report.py   # regenerates Project_Report.docx (needs python-docx)
 ```
 
+## Live app
+https://farm-power-forecast-ankit.streamlit.app/
+
 ## Cloud deployment (Streamlit Community Cloud)
 1. Push this repo to GitHub. 2. Go to https://share.streamlit.io -> New app. 3. Select the repo, branch `main`, file `app.py`. 4. Deploy.
 The pinned `scikit-learn==1.7.2` in `requirements.txt` matches the version used to pickle the models.

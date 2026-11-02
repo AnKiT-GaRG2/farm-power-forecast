@@ -10,7 +10,7 @@ from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 R = Path(__file__).resolve().parents[1]
-APP_URL = sys.argv[1] if len(sys.argv) > 1 else "<to be added after deployment>"
+APP_URL = sys.argv[1] if len(sys.argv) > 1 else "https://farm-power-forecast-ankit.streamlit.app/"
 REPO_URL = "https://github.com/AnKiT-GaRG2/farm-power-forecast"
 met = pd.read_csv(R/"models/metrics.csv", index_col=0)
 per = pd.read_csv(R/"models/per_state_mae.csv", index_col=0)
@@ -163,7 +163,7 @@ B(["Cloud platform: Streamlit Community Cloud.", "Architecture: GitHub repo -> S
    "Services/resources: Streamlit Community Cloud container (shared CPU, ~1 GB RAM), GitHub repository.",
    "Procedure: push the repo to GitHub; on share.streamlit.io choose New app, select repository, branch main, main file app.py; click Deploy.",
    f"Application URL: {APP_URL}",
-   "Screenshots: see Appendix A (deployment screenshots to be inserted by the students after deploying).",
+   "Screenshots: see Appendix A (the running application on Streamlit Community Cloud).",
    "Challenges: pinning scikit-learn to the version used for training (pickled models are version-sensitive); keeping model files small enough for the free tier; cold-start delay when the app has been idle."])
 
 H("8. Analysis and Discussion")
@@ -200,5 +200,8 @@ B(["Khanna, T. (2020). Power consumption in India (2019-2020). Kaggle. https://w
    "Wolpert, D. (1992). Stacked Generalization. Neural Networks 5(2).", "Streamlit documentation: https://docs.streamlit.io; Streamlit Community Cloud: https://streamlit.io/cloud",
    "pandas, NumPy, matplotlib and Plotly documentation."])
 H("Appendix A: Deployment screenshots")
-P("[Insert screenshots of the successful Streamlit Community Cloud deployment and the running dashboard here.]")
+P(f"The application was deployed at {APP_URL} on Streamlit Community Cloud from the GitHub repository (branch main, main file app.py).")
+for f, c in [("deployed_model_comparison.jpg", "Figure A1: Deployed dashboard - model comparison tab"), ("deployed_forecast_explorer.jpg", "Figure A2: Deployed dashboard - forecast explorer tab (Punjab)")]:
+    doc.add_picture(str(R/"screenshots"/f), width=Inches(6.2)); doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+    cp = P(c); cp.alignment = WD_ALIGN_PARAGRAPH.CENTER; cp.runs[0].italic = True
 doc.save(R/"Project_Report.docx"); print("saved")
